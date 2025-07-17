@@ -3,9 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Mispar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Shalom! Your Gematria App is Live.</h1>
-  <p>This is your first test page running on GitHub Pages.</p>
+  <h1>Mispar – Gematria Explorer</h1>
+
+  <input id="wordInput" placeholder="Enter a Hebrew or English word" />
+
+  <select id="methodSelect">
+    <option value="standard">Standard (א=1 to ת=400)</option>
+    <option value="ketana">Ketana (digit sum)</option>
+    <option value="gadol">Mispar Gadol (finals = 500+)</option>
+    <option value="atbash">Atbash</option>
+    <option value="ordinal">English Ordinal (A=1)</option>
+  </select>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="results"></div>
+
+  <script src="gematria.js"></script>
 </body>
 </html>
